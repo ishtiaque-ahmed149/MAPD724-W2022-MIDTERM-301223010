@@ -8,7 +8,7 @@
 import GameplayKit
 import SpriteKit
 
-class Ocean : GameObject
+class Ocean : GameObject            //changed the y positions to x positions
 {
     
     // constructor / initializer
@@ -25,7 +25,7 @@ class Ocean : GameObject
     // LifeCycle Functions
     override func CheckBounds()
     {
-        if(position.y <= -773)
+        if(position.x <= -773)
         {
             Reset()
         }
@@ -33,14 +33,14 @@ class Ocean : GameObject
     
     override func Reset()
     {
-        position.y = 773
+        position.x = 773              //x position to 773, then reset
     }
     
     // initialization
     override func Start()
     {
         zPosition = 0
-        verticalSpeed = 5.0
+        horizontalSpeed = 5.0           //change vertical speed to horizontal speed
     }
     
     override func Update()
@@ -51,6 +51,6 @@ class Ocean : GameObject
     
     func Move()
     {
-        position.y -= verticalSpeed!
+        position.x -= horizontalSpeed!
     }
 }
