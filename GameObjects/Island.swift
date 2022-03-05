@@ -35,7 +35,7 @@ class Island : GameObject
     {
         position.x = 730                                    //changing to horizontal (x-axis)
         // get a pseudo random number -313 to 313
-        let randomY:Int = (randomSource?.nextInt(upperBound: 616))! - 313
+        let randomY:Int = (randomSource?.nextInt(upperBound: 600))! - 300   // -300 to +300
         position.y = CGFloat(randomY)                                       //changing to y position
         isCollding = false
     }
@@ -45,7 +45,7 @@ class Island : GameObject
     {
         zPosition = 1
         Reset()
-        horizontalSpeed = 5.0               //changing to horizontal speed from vertical
+        verticalSpeed = 5.0               //changing to horizontal speed from vertical
     }
     
     override func Update()
@@ -56,6 +56,6 @@ class Island : GameObject
     
     func Move()
     {
-        position.y -= horizontalSpeed!            //changing to horizontal movement <-
+        position.x -= verticalSpeed!            //changing to horizontal movement <-
     }
 }

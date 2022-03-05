@@ -45,7 +45,7 @@ class Cloud : GameObject
         position.y = CGFloat(randomY)
         
         // get a pseudo random number 756 to 776
-        let randomX:Int = (randomSource?.nextInt(upperBound: 10))! + 756
+        let randomX:Int = (randomSource?.nextInt(upperBound: 20))! + 756
         position.x = CGFloat(randomX)
         
         isCollding = false

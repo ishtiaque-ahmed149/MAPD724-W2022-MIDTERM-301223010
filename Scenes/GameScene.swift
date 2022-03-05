@@ -42,7 +42,7 @@ class GameScene: SKScene
 
         // add plane to the scene
         plane = Plane()
-        plane?.position = CGPoint(x: -495, y: 0)    //changed x and y
+        plane?.position = CGPoint(x: -555, y: 0)    //changed x and y
         addChild(plane!)
         
         // add 3 clouds to the scene
@@ -79,17 +79,17 @@ class GameScene: SKScene
     
     func touchDown(atPoint pos : CGPoint)        //changed x and y similar way
     {
-        plane?.TouchMove(newPos: CGPoint(x: -495, y: pos.y))
+        plane?.TouchMove(newPos: CGPoint(x: -555, y: pos.y))    //changed pos to 555
     }
     
     func touchMoved(toPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: -495, y: pos.y))
+        plane?.TouchMove(newPos: CGPoint(x: -555, y: pos.y))
     }
     
     func touchUp(atPoint pos : CGPoint)
     {
-        plane?.TouchMove(newPos: CGPoint(x: -495, y: pos.y))
+        plane?.TouchMove(newPos: CGPoint(x: -555, y: pos.y))
         
     }
     
