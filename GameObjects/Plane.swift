@@ -23,18 +23,18 @@ class Plane : GameObject
     
     // LifeCycle Functions
     
-    override func CheckBounds()
+    override func CheckBounds()             //changed all x to y
     {
         // constrain on the left boundary
-        if(position.x <= -310)
+        if(position.y <= -310)
         {
-            position.x = -310
+            position.y = -310
         }
         
         // constrain on the right boundary
-        if(position.x >= 310)
+        if(position.y >= 310)
         {
-            position.x = 310
+            position.y = 310
         }
     }
     

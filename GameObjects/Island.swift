@@ -25,7 +25,7 @@ class Island : GameObject
     // LifeCycle Functions
     override func CheckBounds()
     {
-        if(position.y <= -730)
+        if(position.x <= -730)       //changing to horizontal direction instead of vertical
         {
             Reset()
         }
@@ -33,19 +33,19 @@ class Island : GameObject
     
     override func Reset()
     {
-        position.y = 730
+        position.x = 730                                    //changing to horizontal (x-axis)
         // get a pseudo random number -313 to 313
-        let randomX:Int = (randomSource?.nextInt(upperBound: 616))! - 313
-        position.x = CGFloat(randomX)
+        let randomY:Int = (randomSource?.nextInt(upperBound: 616))! - 313
+        position.y = CGFloat(randomY)                                       //changing to y position
         isCollding = false
     }
     
     // initialization
     override func Start()
     {
-        Reset()
         zPosition = 1
-        verticalSpeed = 5.0
+        Reset()
+        horizontalSpeed = 5.0               //changing to horizontal speed from vertical
     }
     
     override func Update()
@@ -56,6 +56,6 @@ class Island : GameObject
     
     func Move()
     {
-        position.y -= verticalSpeed!
+        position.y -= horizontalSpeed!            //changing to horizontal movement <-
     }
 }
